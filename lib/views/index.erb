@@ -1,0 +1,24 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body class="text-center">  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/gossips/new/">Créer un potin</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+  <h1 class="text-primary text-center">Mon site de gossips !</h1>
+  <br/>
+  <% gossips.each_with_index do |gossip,index| %>
+      <p>
+        <a  href="/gossips/<%= (index+1) %>"><%= gossip.author %></a><br/>
+        <%= gossip.content %>
+      </p>
+    <% end %>
+  </body
+</html>
+
+

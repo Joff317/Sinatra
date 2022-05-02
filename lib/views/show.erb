@@ -1,0 +1,22 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-info">
+<a class="navbar-brand" href="#">The Gossip Project</a>
+<div class="collapse navbar-collapse" id="navbarNav">
+<a class="nav-link" href="/gossips/new/">Créer un potin</a>
+</div>
+</nav>
+
+  <head>
+    <title>Créer un potin</title>
+  </head>
+  <body>
+  <% gossips.each do |gossip| %>
+   <p> Voici le potin numero <%= id%><br/>
+   Son autheur : <%= gossip.author %><br/>
+   Le contenu du potin : <%= gossip.content %>
+   <% end %>
+   <a href="/">Lien pour revenir à la page des potins</a>
+  </body>
+</html>
